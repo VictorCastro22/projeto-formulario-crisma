@@ -5,62 +5,125 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscrição Crisma</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(20, 220, 63), rgb(17, 71, 51));
+        }
+        .box{
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 15px;
+            width: 20%;
+        }
+        fieldset{
+            border: 3px solid rgb(30, 255, 169);
+        }
+        legend{
+            border: 1px solid rgb(22, 186, 87);
+            padding: 10px;
+            text-align: center;
+            background-color: rgb(22, 186, 87);
+            border-radius: 8px;
+        }
+        .inputBox{
+            position: relative;
+        }
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+        #data_nascimento{
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+        }
+        #submit{
+            background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        #submit:hover{
+            background-image: linear-gradient(to right,rgb(0, 80, 172), rgb(80, 19, 195));
+        }
+    </style>
 </head>
 <body> 
     <div class="box">
         <form action="">
             <fieldset>
-                <legend><b>Formulário de Inscrição da Crisma</b></legend>
+                <legend><b>Inscrição da Crisma</b></legend>
             <br>
             <div class="inputBox">
-                <label for="name">Nome Completo</label>
+                <label for="nome" class="labelInput">Nome completo</label>
                 <input type="text" name="nome" id="nome" class="inputUser" required>
             </div>
-            <div class="inputBox">
-                <label for="data_nascimento"><b>Data de Nascimento</b></label>
-                <input type="date" name="data_nascimento" id="data_nascimento" class="inputUser" required>
-            </div> 
+            <label for="data_nascimento">Data de nascimento</label>
+            <input type="date" name="data_nascimento" id="data_nascimento" required>
             <div class="inputBox">        
-                <label for="name">Telefone</label>
-                <input type="tel" name="Telefone" id="Telefone" class="inputUser" required>
+                <label for="telefone" class="labelInput">Telefone</label>
+                <input type="tel" name="telefone" id="telefone" class="inputUser" required>
             </div>
             <div class="inputBox">
-                <label for="name">Bairro</label>
-                <input type="text" name="nome" id="nome" class="inputUser" required>
+                <label for="bairro" class="labelInput">Bairro</label>
+                <input type="text" name="bairro" id="bairro" class="inputUser" required>
             </div>
             <div class="inputBox">
-                <label for="name">Rua</label>
-                <input type="text" name="nome" id="nome" class="inputUser" required>
+                <label for="rua" class="labelInput">Rua</label>
+                <input type="text" name="rua" id="rua" class="inputUser" required>
             </div>
             <div class="inputBox">
-                <label for="name"><b>Nome Completo da mãe</b></label>
-                <input type="text" name="nome" id="nome" class="inputUser" required>   
+                <label for="nomem" class="labelInput">Nome completo da mãe</label>
+                <input type="text" name="nomem" id="nomem" class="inputUser" required>   
             </div>
             <div class="inputBox">
-                <label for="name">Telefone da Mãe</label>
-                <input type="tel" name="Telefone" id="Telefone" class="inputUser" required>
+                <label for="telefonem" class="labelInput">Telefone da Mãe</label>
+                <input type="tel" name="telefonem" id="telefonem" class="inputUser" required>
             </div>
             <div class="inputBox">
-                <label for="name"><b>Nome Completo da pai</b></label>
-                <input type="text" name="nome" id="nome" class="inputUser" required>   
+                <label for="nomep" class="labelInput">Nome completo da pai</label>
+                <input type="text" name="nomep" id="nomep" class="inputUser" required>   
             </div>
             <div class="inputBox">
-                <label for="name">Telefone do pai</label>
-                <input type="tel" name="Telefone" id="Telefone" class="inputUser" required>
+                <label for="telefonep" class="labelInput">Telefone do pai</label>
+                <input type="tel" name="telefonep" id="telefonep" class="inputUser" required>
             </div>
-            <p>Polo de Crisma:</p>
-            <input type="radio" id="Centro Pastoral" name="local" value="Centro Pastoral" required>
-            <label for ="Centro Pastoral">Capela N.S de Fátima</label>
-            <input type="radio" id="Centro Pastoral" name="local" value="Centro Pastoral" required>
-            <label for ="Centro Pastoral">Centro Pastoral</label>
-            <input type="radio" id="Centro Pastoral" name="local" value="Centro Pastoral" required>
-            <label for ="Centro Pastoral">Coité</label>
-            <input type="radio" id="Centro Pastoral" name="local" value="Centro Pastoral" required>
-            <label for ="Centro Pastoral">Novo Maranguape</label>
-            <input type="radio" id="Centro Pastoral" name="local" value="Centro Pastoral" required>
-            <label for ="Centro Pastoral">Novo Parque Iracema</label>
-            <input type="radio" id="Centro Pastoral" name="local" value="Centro Pastoral" required>
-            <label for ="Centro Pastoral">Santa Fé/Santos Dumont</label>
+            <p><b>Polo de Crisma</b></p>
+            <input type="radio" id="capelansdefatima" name="local" value="centropastoral" required>
+            <label for ="capelansdefatima">Capela N.S de Fátima</label>
+            <br>
+            <input type="radio" id="centropastoral" name="local" value="centropastoral" required>
+            <label for ="centropastoral">Centro Pastoral</label>
+            <br>
+            <input type="radio" id="coite" name="local" value="coite" required>
+            <label for ="coite">Coité</label>
+            <br>
+            <input type="radio" id="novomaranguape" name="local" value="crisma" required>
+            <label for ="novomaranguape">Novo Maranguape</label>
+            <br>
+            <input type="radio" id="novoparqueiracema" name="local" value="novoparqueiracema" required>
+            <label for ="novoparqueiracema">Novo Parque Iracema</label>
+            <br>
+            <input type="radio" id="santafe" name="local" value="santafe" required>
+            <label for ="santafe">Santa Fé/Santos Dumont</label>
             <p><input type="submit" name="submit" id="submit"></p> 
             </fieldset>
         </form>
