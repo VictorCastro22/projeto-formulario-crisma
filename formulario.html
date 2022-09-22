@@ -6,20 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscrição Crisma</title>
     <style>
+        
         body{
             font-family: Arial, Helvetica, sans-serif;
             background-image: linear-gradient(to right, rgb(20, 220, 63), rgb(17, 71, 51));
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            height: 100%;
         }
         .box{
             color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
             background-color: rgba(0, 0, 0, 0.6);
             padding: 15px;
             border-radius: 15px;
-            width: 20%;
+            width: 50%;
         }
         fieldset{
             border: 3px solid rgb(30, 255, 169);
@@ -49,7 +53,7 @@
             padding: 8px;
             border-radius: 10px;
             outline: none;
-            font-size: 15px;
+            font-size: 14px;
         }
         #submit{
             background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
@@ -64,6 +68,25 @@
         #submit:hover{
             background-image: linear-gradient(to right,rgb(0, 80, 172), rgb(80, 19, 195));
         }
+
+        @media (max-width: 460px) {
+            body {                
+                font-size: 75%;
+            }
+
+            fieldset {
+                padding: 32px 0px;
+                width: 100%;
+
+            }
+
+            .box {
+                padding: 16px;
+                
+            }
+
+
+        }
     </style>
 </head>
 <body> 
@@ -71,7 +94,6 @@
         <form action="">
             <fieldset>
                 <legend><b>Inscrição da Crisma</b></legend>
-            <br>
             <div class="inputBox">
                 <label for="nome" class="labelInput">Nome completo</label>
                 <input type="text" name="nome" id="nome" class="inputUser" required>
@@ -95,11 +117,11 @@
                 <input type="text" name="nomem" id="nomem" class="inputUser" required>   
             </div>
             <div class="inputBox">
-                <label for="telefonem" class="labelInput">Telefone da Mãe</label>
+                <label for="telefonem" class="labelInput">Telefone da mãe</label>
                 <input type="tel" name="telefonem" id="telefonem" class="inputUser" required>
             </div>
             <div class="inputBox">
-                <label for="nomep" class="labelInput">Nome completo da pai</label>
+                <label for="nomep" class="labelInput">Nome completo do pai</label>
                 <input type="text" name="nomep" id="nomep" class="inputUser" required>   
             </div>
             <div class="inputBox">
